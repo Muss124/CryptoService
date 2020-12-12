@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Advanced";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Advanced functionality</h2>
+
+<form>
+    <fieldset class="form-group">
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="checked">
+                Encrypt
+            </label>
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                Decrypt
+            </label>
+        </div>
+    </fieldset>
+    <fieldset class="form-group">
+        <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Encryption key</label>
+            <input type="text" class="form-control" placeholder="Enter encryption key or leave empty for default" id="inputDefault" style="min-width: 60%">
+        </div>
+    </fieldset>
+    <fieldset class="form-group">
+        <div class="form-group">
+            <label for="exampleSelect1">Encryption algorithm</label>
+            <select class="form-control" id="exampleSelect1" style="min-width: 60%">
+                <option>Caesar cipher</option>
+                <option>Vigenère cipher</option>
+                <option>Hill cipher</option>
+                <option>A1Z26 cipher</option>
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div class="form-group">
+            <label for="exampleTextarea">Text Input</label>
+            <textarea class="form-control" id="exampleTextarea" rows="5" style="min-width: 60%"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">Get text from file</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text">Select .txt or .docx file to import text</small>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label for="exampleTextarea">Result</label>
+            <textarea class="form-control" id="exampleTextarea" rows="5" style="min-width: 60%" readonly=""></textarea>
+        </div>
+        <button type="button" class="btn btn-outline-warning">Calculate</button>
+    </fieldset>
+</form>

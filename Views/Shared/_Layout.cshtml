@@ -8,47 +8,53 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body style="background-color: black;">
     @*<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    @Html.ActionLink("Home page", "Index", "Home")
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">En/Decrypion service</a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-item">@Html.ActionLink("Default crypto", "Index", "Home")</div>
-                        <div class="dropdown-item" >@Html.ActionLink("Advanced crypto", "Index", "Home")</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>*@
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Home page", "Index", "Home")
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">En/Decrypion service</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">@Html.ActionLink("Default crypto", "Index", "Home")</div>
+                            <div class="dropdown-item" >@Html.ActionLink("Advanced crypto", "Index", "Home")</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>*@
     <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Crypto Service", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse" id="navbarColor01">
-                    <ul class="nav navbar-nav"> 
-                        <li>@Html.ActionLink("Default crypto", "Default", "DecryptDefault")</li>
-                        <li>@Html.ActionLink("Advanced crypto", "Index", "Home")</li>
-                    </ul>
-                </div>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Crypto Service", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse" id="navbarColor01">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Default crypto", "Default", "Decrypt")</li>
+                    <li>@Html.ActionLink("Advanced crypto", "Advanced", "Decrypt")</li>
+                </ul>
             </div>
         </div>
-    <div class="container body-content">
+    </div>
+    <div class="container body-content" style="
+                background-image: url('../../pepe.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                color: white;                
+                ">
         @RenderBody()
         <hr />
         <footer>
